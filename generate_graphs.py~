@@ -1,0 +1,12 @@
+from datetime import datetime
+import plotly
+from plotly.graph_objs import Bar, Scatter, Layout
+import shutil
+
+def cur_age_shape_plot(ages):
+    plotly.offline.plot({
+        "data":[Bar(x=ages,y=ages,text="ages")],
+        "layout":Layout(
+            title="How the age of people applying for appeals has evolved over time"
+            )
+        })
